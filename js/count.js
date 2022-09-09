@@ -1,5 +1,5 @@
 var settings = {
-  "url": "https://beishifengqiban.cf//api/stats",
+  "url": "https://beishifengqiban.cf/api/stats",
   "method": "GET",
   "timeout": 0,
 };
