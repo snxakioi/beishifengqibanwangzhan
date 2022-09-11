@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>口算练习</title> 
+</head>
+<body>
+
+<button onclick="myFunction()">开始练习</button>
+<div id="demo"></div>
+<form>
+	<input id="input" type="number"  placeholder="请输入你的答案" />
+	<button onclick="check_out()">提交</button>
+</form>
+<script>
+var x="",i,ans=0,cnt=0;
+function myFunction() {
+	var command = Math.floor(Math.random()*2)
+	var a = Math.floor(Math.random()*100);
+	var b = Math.floor(Math.random()*100);
+	if (command == 0 ) {
+		x="<h1>"+a+"+"+b+"</h1>";
+		cnt = (a + b);
+	} else {
+		if (a < b) {
+			var c;
+			c = a
+			a = b
+			b = c
+		}
+		x="<h1>"+a+"-"+b+"</h1>";
+		cnt = (a - b);
+	}
+	document.getElementById("demo").innerHTML=x;
+}
+function check_out() {
+	ans = document.getElementById("input").value;
+	if (ans == cnt) {
+		alert("正确")
+	} else {
+		alert("错误")
+	}
+} 
+</script>
+
+
+</body>
+</html>
